@@ -1359,78 +1359,9 @@ h6 {
 }
 
 
-
-/* prices loader */
-.shimmerloader{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    background-color: white;
-    top: 0; left: 0; right: 0; 
-    z-index: 998;
-}
-.removeloader{
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    background-color: white;
-    top: 0; left: 0; right: 0; 
-    z-index: 998;
-}
-.shimmerloader .loaderheader{
-    height: 50px; width: 100%; margin-bottom: 30px;
-    background-color: var(--loaderGrey);
-}
-.shimmerloader .loaderbtns{
-    display: flex; flex-direction: row; flex-wrap: wrap; align-items: center;
-}
-.shimmerloader .loadertitle{
-    height: 20px; width: 200px; margin: 15px 15px 30px 0px;
-    border-radius: 50px; background-color: var(--loaderGrey);
-}
-.shimmerloader .loaderbtns .loaderbtn{
-    height: 50px; width: 150px; margin: 0px 15px 15px 0px;
-    border-radius: 50px; background-color: var(--loaderGrey);
-}
-.shimmerloader .loaderbtns .loaderbtn:nth-child(4){
-    width: 80px;
-}
-.shimmerloader .loaderbtns .loaderbtn:nth-child(2){
-    width: 180px;
-}
-.shimmerloader .loaderitems{
-    display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;  align-items: center; width: 100%;
-}
-.shimmerloader .loaderitems .loaderitem{
-    height: 200px; width: 30%; margin: 0px 0px 20px 0px;
-    border-radius: 15px; background-color: var(--loaderGrey);
-}
-.shimmerloader .loadertext{
-    height: 20px; width: 100%; margin: 15px 15px 30px 0px;
-    border-radius: 50px; background-color: var(--loaderGrey);
-}
-.shimmerloader .loadersubtext{
-    height: 20px; width: 60%; margin: 15px 15px 30px 0px;
-    border-radius: 50px; background-color: var(--loaderGrey);
-}
-@media (max-width: 784px) {
-    .shimmerloader .loaderitems .loaderitem{
-        height: 120px; width: 100%; margin: 0px 0px 20px 0px;
-        border-radius: 15px; background-color: var(--loaderGrey);
-    }
-    .shimmerloader .loadertext, .loadersubtext, .loadertitle{
-        height: 15px !important; 
-    }
-    .shimmerloader .loaderbtns .loaderbtn{
-        height: 40px; width: 150px; margin: 0px 15px 15px 0px;
-        border-radius: 50px; background-color: var(--loaderGrey);
-    }
-}
-
 /*--------------------------------------------------------------
 # End of Prices html
 --------------------------------------------------------------*/
-
 
 
 
@@ -1600,6 +1531,177 @@ h6 {
 
 
 /*--------------------------------------------------------------
+# Loaders
+--------------------------------------------------------------*/
+/* index loader */
+
+.indexloader{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(37, 37, 37);
+    top: 0; left: 0; right: 0; bottom: 0; 
+    z-index: 998;
+}
+.indexloaderbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+}
+.indexloaderbox h4{
+    margin: 20px 30px 0px 0px;
+    color: white;
+    font-weight: bold;
+}
+.indexloaderbox p{
+    color: rgba(245, 245, 245, 0.59);
+    font-size: 12px;
+    margin: 10px 28px 0px 0px;
+}
+.indexloader .heart #line {
+    fill: none;
+    stroke: #e00000;
+    stroke-width: 1.5;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+    stroke-opacity: 1;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dash 3s linear infinite;
+}
+.indexloader .heart #point {
+    fill: none;
+    stroke: #f00000;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 0.1;
+    stroke-opacity: 1;
+    stroke-dasharray: 0.0001, 0.9999;
+    stroke-dashoffset: 1;
+    animation: dash 3s linear infinite;
+}
+@media (max-width: 784px) {
+    .indexloaderbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 80%;
+    }
+    .indexloader .heart {
+        padding-left: 15% !important;
+    }
+    .indexloaderbox h4{
+        margin: 20px 0px 0px 0px;
+        color: white;
+        font-weight: bold;
+    }
+    .indexloaderbox p{
+        color: rgba(245, 245, 245, 0.59);
+        text-align: center;
+        line-height: 1.5;
+        font-size: 12px;
+        margin: 10px 0px 0px 0px;
+    }
+}
+@keyframes dash {
+    0% {
+      stroke-dashoffset: 1;
+    }
+    80% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+}
+  
+.removeindexloader{
+    display: none;
+}
+
+/* prices loader */
+.shimmerloader{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: white;
+    top: 0; left: 0; right: 0; bottom: 0; 
+    z-index: 998;
+}
+.removeloader{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    background-color: white;
+    top: 0; left: 0; right: 0; bottom: 0; 
+    z-index: 998;
+}
+.shimmerloader .loaderheader{
+    height: 50px; width: 100%; margin-bottom: 30px;
+    background-color: var(--loaderGrey);
+}
+.shimmerloader .loaderbtns{
+    display: flex; flex-direction: row; flex-wrap: wrap; align-items: center;
+}
+.shimmerloader .loadertitle{
+    height: 20px; width: 200px; margin: 15px 15px 30px 0px;
+    border-radius: 50px; background-color: var(--loaderGrey);
+}
+.shimmerloader .loaderbtns .loaderbtn{
+    height: 50px; width: 150px; margin: 0px 15px 15px 0px;
+    border-radius: 50px; background-color: var(--loaderGrey);
+}
+.shimmerloader .loaderbtns .loaderbtn:nth-child(4){
+    width: 80px;
+}
+.shimmerloader .loaderbtns .loaderbtn:nth-child(2){
+    width: 180px;
+}
+.shimmerloader .loaderitems{
+    display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;  align-items: center; width: 100%;
+}
+.shimmerloader .loaderitems .loaderitem{
+    height: 200px; width: 30%; margin: 0px 0px 20px 0px;
+    border-radius: 15px; background-color: var(--loaderGrey);
+}
+.shimmerloader .loadertext{
+    height: 20px; width: 100%; margin: 15px 15px 30px 0px;
+    border-radius: 50px; background-color: var(--loaderGrey);
+}
+.shimmerloader .loadersubtext{
+    height: 20px; width: 60%; margin: 15px 15px 30px 0px;
+    border-radius: 50px; background-color: var(--loaderGrey);
+}
+@media (max-width: 784px) {
+    .shimmerloader .loaderitems .loaderitem{
+        height: 120px; width: 100%; margin: 0px 0px 20px 0px;
+        border-radius: 15px; background-color: var(--loaderGrey);
+    }
+    .shimmerloader .loadertext, .loadersubtext, .loadertitle{
+        height: 15px !important; 
+    }
+    .shimmerloader .loaderbtns .loaderbtn{
+        height: 40px; width: 150px; margin: 0px 15px 15px 0px;
+        border-radius: 50px; background-color: var(--loaderGrey);
+    }
+}
+
+/*--------------------------------------------------------------
+# End of Loaders
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
 # loading effect
 --------------------------------------------------------------*/
 
@@ -1607,7 +1709,7 @@ h6 {
     position: relative;
     overflow: hidden;
 }
-  
+
 .shimmer-box::after {
     content: "";
     position: absolute;

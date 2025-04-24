@@ -184,7 +184,7 @@ function goBack() {
 }
 goBack();
 
-// loading screen shimmer animate
+// loading screen shimmer loader
 document.addEventListener("DOMContentLoaded", () => {
   let loader = document.querySelector(".shimmerloader")
 
@@ -192,5 +192,12 @@ document.addEventListener("DOMContentLoaded", () => {
     loader.classList.add("removeloader");
   }
 })
+// loading screen index loader
+document.addEventListener("DOMContentLoaded", () => {
+  let loader = document.querySelector(".indexloader")
 
+  if (loader) {
+    loader.classList.add("removeindexloader");
+  }
+})
 
