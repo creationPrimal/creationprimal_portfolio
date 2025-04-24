@@ -75,7 +75,7 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;;
     line-height: 26px;
-    padding-bottom: 100px;
+    padding-bottom: 130px;
 }
 ul {
     list-style: outside none none;
@@ -129,9 +129,7 @@ input[type=password],  input[type=tel],  button,  button[type=submit] {
 }
   
 @media (max-width: 768px) {
-    #header {
-        display: none !important;
-    }
+    
     #header.header-scrolled {
         background: rgba(0, 0, 0, 0.8);
         height: 34px;
@@ -1288,19 +1286,44 @@ h6 {
     display: none;
 }
 
-@media (max-width: 784px) {
+@media (max-width: 991px) {
     .mobilenav{
         display: flex;
         position: fixed;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
         height: 50px;
-        width: 80%;
+        width: 85%;
         border-radius: 50px;
         background-color: black;
-        bottom: 30px;
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.397);
         z-index: 9999;
+    }
+    .mobilenav i{
+        color: white;
+        font-size: 20px;
+    }
+    .mobilenav .nav-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: rgba(245, 245, 245, 0.1);
+    }
+    .mobilenav  .active i{
+        color: orange;
+    }
+    #header {
+        display: none !important;
+    }
+    .back-to-top{
+        display: none !important;
     }
 }
 
