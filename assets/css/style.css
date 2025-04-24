@@ -9,6 +9,7 @@
     --lightblue: #3EC1D5;
     --orangered: orangered;
     --orange: orange;
+    --loaderGrey: rgb(213, 213, 213);
 }
 p {
     margin: 0 0 15px;
@@ -489,9 +490,9 @@ h6 {
 }
 .about-area .titlelineseparator{
     height: 3px;
-    width: 100px;
+    width: 80px;
     background-color: var(--orangered);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 .about-area .aboutimg img{
     object-fit: cover;
@@ -528,7 +529,13 @@ h6 {
     .about-area h2{
         font-size: 27px;
         font-weight: bold;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
+    }
+    .about-area .titlelineseparator{
+        height: 3px;
+        width: 80px;
+        background-color: var(--orangered);
+        margin-bottom: 40px;
     }
   
 }
@@ -1065,7 +1072,7 @@ h6 {
     }
     
     .single-icon p {
-      font-size: 17px;
+      font-size: 16px;
       line-height: 20px;
     }
     
@@ -1116,12 +1123,12 @@ h6 {
     color: #222;
     padding: 0;
     margin: 0;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: bold;
     line-height: 1;
   }
   .footer-head p {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 
@@ -1244,6 +1251,213 @@ h6 {
 /*--------------------------------------------------------------
 # End of Footer
 --------------------------------------------------------------*/
+
+
+
+
+/*--------------------------------------------------------------
+# Prices html
+--------------------------------------------------------------*/
+
+.price-head{
+    flex-direction: column;
+    flex-wrap: wrap;
+    position:relative;
+    padding-top: 80px;
+}
+.price-h2{
+    font-size: 30px;
+    line-height: 1.4;
+    margin: 00px 0px 30px 0px;
+    color: var(--orangered);
+}
+  .pricetags{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.pricetags .tag{
+    padding: 10px 30px 10px 30px;
+    margin-right: 20px;
+    background-color: #3ec1d577;
+    border: none;
+    border-radius: 50px;
+}
+.pricetags .tag b{
+    color: black !important;
+}
+.pricetags .tag:hover {
+    background-color: #42daf2;
+    transform: scale(1.05);
+    transition: 200ms;
+}
+.det{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.details{
+    width: 32%;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  
+}
+.mobileheader{
+    display: none;
+}
+.table>:not(caption)>*>* {
+    background-color: #3ec1d525;
+}
+@media Screen and (max-width: 991px) {
+    .pricetags .tag{
+        padding: 5px 20px 5px 20px;
+        margin: 0px 15px 15px 0px;
+        background-color: #3ec1d577;
+        border: none;
+        border-radius: 50px;
+    }
+    .mobileheader{
+        display: flex;
+        position: fixed;
+        background-color: black;
+        height: 50px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        top: 0;
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.237);
+        z-index: 997;
+    }
+    .mobileheader .backbutton{
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+    .mobileheader .backbutton i{
+        color: var(--lightblue);
+        font-size: 30px;
+    }
+    .mobileheader  h4{
+        margin: 0px !important;
+        font-weight: bold;
+        font-size: 19px;
+        color: var(--lightblue);
+    }
+    .details{
+      width: 95%;
+      padding-right: 10px;
+    
+    }
+    .table {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+}
+
+
+
+/* prices loader */
+.shimmerloader{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: white;
+    top: 0; left: 0; right: 0; 
+    z-index: 998;
+}
+.removeloader{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    background-color: white;
+    top: 0; left: 0; right: 0; 
+    z-index: 998;
+}
+.shimmerloader .loaderheader{
+    height: 50px; width: 100%; margin-bottom: 30px;
+    background-color: var(--loaderGrey);
+}
+.shimmerloader .loaderbtns{
+    display: flex; flex-direction: row; flex-wrap: wrap; align-items: center;
+}
+.shimmerloader .loadertitle{
+    height: 20px; width: 200px; margin: 15px 15px 30px 0px;
+    border-radius: 50px; background-color: var(--loaderGrey);
+}
+.shimmerloader .loaderbtns .loaderbtn{
+    height: 50px; width: 150px; margin: 0px 15px 15px 0px;
+    border-radius: 50px; background-color: var(--loaderGrey);
+}
+.shimmerloader .loaderbtns .loaderbtn:nth-child(4){
+    width: 80px;
+}
+.shimmerloader .loaderbtns .loaderbtn:nth-child(2){
+    width: 180px;
+}
+.shimmerloader .loaderitems{
+    display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;  align-items: center; width: 100%;
+}
+.shimmerloader .loaderitems .loaderitem{
+    height: 200px; width: 30%; margin: 0px 0px 20px 0px;
+    border-radius: 15px; background-color: var(--loaderGrey);
+}
+.shimmerloader .loadertext{
+    height: 20px; width: 100%; margin: 15px 15px 30px 0px;
+    border-radius: 50px; background-color: var(--loaderGrey);
+}
+.shimmerloader .loadersubtext{
+    height: 20px; width: 60%; margin: 15px 15px 30px 0px;
+    border-radius: 50px; background-color: var(--loaderGrey);
+}
+@media (max-width: 784px) {
+    .shimmerloader .loaderitems .loaderitem{
+        height: 120px; width: 100%; margin: 0px 0px 20px 0px;
+        border-radius: 15px; background-color: var(--loaderGrey);
+    }
+    .shimmerloader .loadertext, .loadersubtext, .loadertitle{
+        height: 15px !important; 
+    }
+    .shimmerloader .loaderbtns .loaderbtn{
+        height: 40px; width: 150px; margin: 0px 15px 15px 0px;
+        border-radius: 50px; background-color: var(--loaderGrey);
+    }
+}
+
+/*--------------------------------------------------------------
+# End of Prices html
+--------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1385,4 +1599,35 @@ h6 {
 
 
 
+/*--------------------------------------------------------------
+# loading effect
+--------------------------------------------------------------*/
+
+.shimmer-box {
+    position: relative;
+    overflow: hidden;
+}
   
+.shimmer-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%);
+    animation: shimmer 1.5s infinite;
+}
+  
+  @keyframes shimmer {
+    0% {
+      left: -150px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+/*--------------------------------------------------------------
+# End of loading effect
+--------------------------------------------------------------*/
