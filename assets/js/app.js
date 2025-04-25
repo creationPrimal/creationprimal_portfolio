@@ -189,7 +189,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let loader = document.querySelector(".shimmerloader")
 
   if (loader) {
-    loader.classList.add("removeloader");
+    setTimeout(() => {
+      loader.classList.add("removeloader"); // apply fading effect after 250 ms
+    }, 250)
+    setTimeout(() => {
+      loader.remove(); // remove loader after 500ms
+    }, 500)
   }
 })
 // loading screen index loader
@@ -197,7 +202,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let loader = document.querySelector(".indexloader")
 
   if (loader) {
-    loader.classList.add("removeindexloader");
+    setTimeout(() => {
+      loader.classList.add("removeindexloader"); // apply fading effect after 2000 ms
+    }, 2000)
+    setTimeout(() => {
+      loader.remove(); // remove loader after 2500ms
+    }, 2500)
   }
 })
 

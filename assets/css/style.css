@@ -9,7 +9,7 @@
     --lightblue: #3EC1D5;
     --orangered: orangered;
     --orange: orange;
-    --loaderGrey: rgb(213, 213, 213);
+    --loaderGrey: rgb(229, 229, 229);
 }
 p {
     margin: 0 0 15px;
@@ -464,7 +464,11 @@ h6 {
     color: #fff;
     background: #3ec1d5;
 }
-  
+
+.carousel-container span {
+    color: var(--lightblue);
+}
+
 #hero .btn-get-started:hover {
     background: #fff;
     color: #3ec1d5;
@@ -1541,9 +1545,14 @@ h6 {
     position: fixed;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease; 
     background-color: rgb(37, 37, 37);
     top: 0; left: 0; right: 0; bottom: 0; 
     z-index: 998;
+}
+.removeindexloader{
+    opacity: 0;
 }
 .indexloaderbox{
     display: flex;
@@ -1624,9 +1633,7 @@ h6 {
     }
 }
   
-.removeindexloader{
-    display: none;
-}
+
 
 /* prices loader */
 .shimmerloader{
@@ -1634,16 +1641,13 @@ h6 {
     flex-direction: column;
     position: fixed;
     background-color: white;
-    top: 0; left: 0; right: 0; bottom: 0; 
+    opacity: 1;
+    transition: opacity 0.5s ease; 
+    top: 0; left: 0; right: 0; 
     z-index: 998;
 }
 .removeloader{
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    background-color: white;
-    top: 0; left: 0; right: 0; bottom: 0; 
-    z-index: 998;
+    opacity: 0;
 }
 .shimmerloader .loaderheader{
     height: 50px; width: 100%; margin-bottom: 30px;
@@ -1687,7 +1691,7 @@ h6 {
         border-radius: 15px; background-color: var(--loaderGrey);
     }
     .shimmerloader .loadertext, .loadersubtext, .loadertitle{
-        height: 15px !important; 
+        height: 20px !important; 
     }
     .shimmerloader .loaderbtns .loaderbtn{
         height: 40px; width: 150px; margin: 0px 15px 15px 0px;
