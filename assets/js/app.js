@@ -239,22 +239,3 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Detect if DevTools are open
-document.addEventListener("DOMContentLoaded", () => {
-  let devtools = {open: false};
-  const threshold = 160;
-
-  setInterval(() => {
-    const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-    const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-    if (widthThreshold || heightThreshold) {
-      if (!devtools.open) {
-        devtools.open = true;
-        alert("Please close developer tools NOW! 🙄");
-        window.location.reload();
-      }
-    } else {
-      devtools.open = false;
-    }
-  }, 500);
-})
