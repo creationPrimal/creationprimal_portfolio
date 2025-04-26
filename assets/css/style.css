@@ -9,6 +9,7 @@
     --lightblue: #3EC1D5;
     --orangered: orangered;
     --orange: orange;
+    --lightgrey: #e1e1e181;
     --loaderGrey: rgb(229, 229, 229);
 }
 p {
@@ -1371,6 +1372,160 @@ h6 {
 
 
 
+/*--------------------------------------------------------------
+# Samples html
+--------------------------------------------------------------*/
+.samplesection{
+    padding-top: 80px;
+}
+.samplesection h2{
+    font-size: 25px;
+    color: var(--orangered);
+}
+.websection{
+    padding: 60px 10px 90px 10px;
+    margin-top: 40px;
+    background-color: var(--lightgrey);
+}
+.websitesamples{
+    display: flex;
+    flex-direction: column;
+}
+.itemsamples{
+    display: flex;
+    margin-top: 10px;
+}
+.itemsample{
+    padding: 15px;
+}
+.samplecontent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+}
+.samplecontent:hover{
+    box-shadow: 10px 10px 40px #e7e7e7,
+    -7px -7px 40px #bebebe;
+    transform: scale(1.03);
+    transition: 200ms;
+}
+.itemsample .item-icon{
+    min-width: 50px; height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    overflow: hidden;
+}
+.itemsample .item-icon img{
+    object-fit: cover;
+    width: 100%; height: 100%;
+}
+.itemsample h5{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.itemsample p{
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+.itemsample b{
+    color: #579ea9;
+}
+.itemsample i{
+    font-size: 30px;
+    color: orangered;
+}
+.samplecontent:hover b{
+    color: orangered;
+    transition: 200ms;
+}
+
+@media (max-width: 991px) {
+    .itemsample p{
+        font-size: 16px;
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End of Samples html
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Info html
+--------------------------------------------------------------*/
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.655);
+}
+.infodiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 40%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+.infoicon{
+    height: 80px; min-width: 80px;
+    overflow: hidden;
+}
+.infoicon img{
+    height: 100%; width: 100%;
+    object-fit: cover;
+}
+.infodiv p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 784px) {
+    .infodiv{
+        height: 30%;
+        width: 80%;
+    }
+    .infoicon{
+        height: 60px; min-width: 60px;
+        overflow: hidden;
+    }
+}
+
+/*--------------------------------------------------------------
+# End of Info html
+--------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1643,14 +1798,15 @@ h6 {
     background-color: white;
     opacity: 1;
     transition: opacity 0.5s ease; 
-    top: 0; left: 0; right: 0; 
+    top: 0; left: 0; right: 0; bottom: 0; 
     z-index: 998;
 }
 .removeloader{
     opacity: 0;
 }
 .shimmerloader .loaderheader{
-    height: 50px; width: 100%; margin-bottom: 30px;
+    display: flex;
+    height: 50px; min-height: 50px; width: 100%; margin-bottom: 30px;
     background-color: var(--loaderGrey);
 }
 .shimmerloader .loaderbtns{
