@@ -197,6 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 500)
   }
 })
+
 // loading screen index loader
 document.addEventListener("DOMContentLoaded", () => {
   let loader = document.querySelector(".indexloader")
@@ -211,3 +212,49 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })
 
+// prevent right click
+document.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+  alert("Sorry! You can not access context menu! 🙄");
+})
+
+//prevent short cut clicks
+document.addEventListener("keydown", (e) => {
+  // Block F12 key
+  if (e.key === "F12") {
+    e.preventDefault();
+    alert("Sorry! Developer tools are disabled! 🙄");
+  }
+
+  // Block Ctrl+Shift+I
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") {
+    e.preventDefault();
+    alert("Sorry! Developer tools are disabled! 🙄");
+  }
+
+  // Block Ctrl+U (view source)
+  if (e.ctrlKey && e.key.toLowerCase() === "u") {
+    e.preventDefault();
+    alert("Sorry! Viewing source is disabled! 🙄");
+  }
+});
+
+// Detect if DevTools are open
+document.addEventListener("DOMContentLoaded", () => {
+  let devtools = {open: false};
+  const threshold = 160;
+
+  setInterval(() => {
+    const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+    const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+    if (widthThreshold || heightThreshold) {
+      if (!devtools.open) {
+        devtools.open = true;
+        alert("Please close developer tools NOW! 🙄");
+        window.location.reload();
+      }
+    } else {
+      devtools.open = false;
+    }
+  }, 500);
+})
