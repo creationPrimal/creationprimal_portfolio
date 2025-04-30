@@ -1709,82 +1709,119 @@ h6 {
 .removeindexloader{
     opacity: 0;
 }
-.indexloaderbox{
+.indexloader{
     display: flex;
     flex-direction: column;
+    position: fixed;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    width: 300px;
+    opacity: 1;
+    transition: opacity 0.5s ease; 
+    background-color: rgb(37, 37, 37);
+    top: 0; left: 0; right: 0; bottom: 0; 
+    z-index: 998;
 }
-.indexloaderbox h4{
-    margin: 20px 30px 0px 0px;
+.removeindexloader{
+    opacity: 0;
+}
+.indexloader #pageloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.indexloader #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+  
+.indexloader h4{
+    margin: 20px 0px 0px 0px;
     color: white;
     font-weight: bold;
 }
-.indexloaderbox p{
+.indexloader p{
     color: rgba(245, 245, 245, 0.59);
     font-size: 12px;
-    margin: 10px 28px 0px 0px;
 }
-.indexloader .heart #line {
-    fill: none;
-    stroke: #e00000;
-    stroke-width: 1.5;
-    stroke-linecap: butt;
-    stroke-linejoin: round;
-    stroke-miterlimit: 4;
-    stroke-opacity: 1;
-    stroke-dasharray: 1;
-    stroke-dashoffset: 1;
-    animation: dash 3s linear infinite;
+#ring {
+    width: 100px;
+    height: 100px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: absolute;
 }
-.indexloader .heart #point {
-    fill: none;
-    stroke: #f00000;
-    stroke-width: 5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 0.1;
-    stroke-opacity: 1;
-    stroke-dasharray: 0.0001, 0.9999;
-    stroke-dashoffset: 1;
-    animation: dash 3s linear infinite;
+  
+.indexloader #ring:nth-child(1) {
+    border-bottom: 8px solid rgb(255, 141, 249);
+    animation: rotate1 2s linear infinite;
 }
+
 @media (max-width: 784px) {
-    .indexloaderbox{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 300px;
-        width: 80%;
-    }
-    .indexloader .heart {
-        padding-left: 15% !important;
-    }
-    .indexloaderbox h4{
-        margin: 20px 0px 0px 0px;
-        color: white;
-        font-weight: bold;
-    }
-    .indexloaderbox p{
-        color: rgba(245, 245, 245, 0.59);
-        text-align: center;
-        line-height: 1.5;
-        font-size: 12px;
-        margin: 10px 0px 0px 0px;
+    #ring {
+        width: 80px;
+        height: 80px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        position: absolute;
     }
 }
-@keyframes dash {
-    0% {
-      stroke-dashoffset: 1;
+  
+@keyframes rotate1 {
+    from {
+      transform: rotateX(50deg) rotateZ(110deg);
     }
-    80% {
-      stroke-dashoffset: 0;
+  
+    to {
+      transform: rotateX(50deg) rotateZ(470deg);
     }
-    100% {
-      stroke-dashoffset: 0;
+}
+  
+.indexloader #ring:nth-child(2) {
+    border-bottom: 8px solid rgb(255,65,106);
+    animation: rotate2 2s linear infinite;
+}
+  
+@keyframes rotate2 {
+    from {
+      transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+    }
+  
+    to {
+      transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+    }
+}
+  
+.indexloader #ring:nth-child(3) {
+    border-bottom: 8px solid rgb(0,255,255);
+    animation: rotate3 2s linear infinite;
+}
+  
+@keyframes rotate3 {
+    from {
+      transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+    }
+  
+    to {
+      transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+    }
+}
+  
+.indexloader #ring:nth-child(4) {
+    border-bottom: 8px solid rgb(252, 183, 55);
+    animation: rotate4 2s linear infinite;
+  }
+  
+@keyframes rotate4 {
+    from {
+      transform: rotateX(70deg) rotateZ(270deg);
+    }
+  
+    to {
+      transform: rotateX(70deg) rotateZ(630deg);
     }
 }
   

@@ -199,10 +199,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (loader) {
     setTimeout(() => {
       loader.classList.add("removeindexloader"); // apply fading effect after 2000 ms
-    }, 2000)
+    }, 200)
     setTimeout(() => {
       loader.remove(); // remove loader after 2500ms
-    }, 2500)
+    }, 400)
   }
 })
 
