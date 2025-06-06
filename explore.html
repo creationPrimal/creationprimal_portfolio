@@ -18,79 +18,201 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     
 
-    <title>Primal - Explore</title>
+    <title>Resources - Home</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- styles -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/explorestyle.css">
+
 
 
 </head>
 <body>
-    
+
     <!-- header-->
-    <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container d-flex justify-content-between">
 
-            <div class="logo">
-                <h1><a href="index.html"><span>CreationPrimal</span></a></h1>
-            </div>
+        <div class="logo animate__animated animate__fadeInLeft">
+            <h1><a href="index.html"><span>CreationPrimal</span></a></h1>
+        </div>
 
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-                    <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
-                    <li><a class="nav-link scrollto" href="prices.html">Prices</a></li>
-                    <li><a class="nav-link scrollto" href="samples.html">Work samples</a></li>
-                    <li><a class="nav-link scrollto active" href="explore.html">Explore</a></li>
-                    <li><a class="nav-link scrollto" href="index.html#contact">Contacts</a></li>
-                </ul>
-            </nav>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+                <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+                <li><a class="nav-link scrollto" href="prices.html">Prices</a></li>
+                <li><a class="nav-link scrollto" href="samples.html">Work samples</a></li>
+                <li><a class="nav-link scrollto active" href="explore.html">Explore</a></li>
+                <li><a class="nav-link scrollto" href="index.html#contact">Contacts</a></li>
+                <a href="login.html" class="btn-sign-in animate__animated animate__fadeInRight">Sign In</a>
+            </ul>
+            
+        </nav>
+
         </div>
     </header>
     <!-- End Header -->
 
-    <!-- mobile header -->
-    <section>
-        <div class="container-lg mobileheader">
-            <button title="Go Back" class="backbutton goback animate__animated animate__fadeInLeft">
-                <i class="bi bi-arrow-left-circle-fill"></i>
-            </button>
-            <div class="centertitle">
-                <h4>Explore</h4>
+
+    <!-- hero section-->
+     <!-- ======= hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container">
+
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+                <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                <div class="carousel-item active" style="background-image: url(assets/exploreimages/hero/hero1.jpg)">
+                    <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown">Games & Entertainment</h2>
+                        <p class="animate__animated animate__fadeInUp">Discover exciting web games & entertainment tools built for <span><b>fun</b></span> and <span><b>creativity.</b></span></p>
+                        <a href="#main" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                        <a href="login.html" class="btn-sign-in scrollto animate__animated animate__fadeInUp">Sign In</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" style="background-image: url(assets/exploreimages/hero/hero2.jpg)">
+                    <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown">Tools, Designs & Educational</h2>
+                        <p class="animate__animated animate__fadeInUp">Sharpen your skills with IQ tests, quizzes, educational apps, and ready-to-use design templates.</p>
+                        <a href="#main" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" style="background-image: url(assets/exploreimages/hero/hero3.jpg)">
+                    <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown">Bring Your Ideas to Life</h2>
+                        <p class="animate__animated animate__fadeInUp">Have an exciting project you need help with? Contact Us.</p>
+                        <a href="#main" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+                </a>
+
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+                </a>
+
             </div>
-            <div class="backbutton">
-                
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+
+    <!-- Main contents -->
+     <section class="exploremain" id="main">
+        <div class="container animate__animated animate__fadeIn">
+            <div class="exploretitle">
+                <h3>Explore <span><i class="bi bi-stars"></i></span></h3>
+                <p>Explore our collection of curated <span><b>resources</b></span>, organized into four distinct categories. <br> Select any category to discover <span><b>tools</b></span> and content tailored to your needs.</p>
+            </div>
+            <div class="row">
+                <div class="exploreitem explorehome col-lg-6 col-md-12 col-sm-12">
+                    <a href="games.html"><div class="explorediv">
+                        <div class="itemimage">
+                            <img src="assets/exploreimages/explorecats/gamescat.jpg" alt="">
+                        </div>
+                        <div class="itemcontents">
+                            <h4>games & Entertainment</h4>
+                            <p>Discover a variety of games & entertainment tools in this category. Explore the options, enjoy the experience, and have fun!</p>
+                            <div class="viewmore">
+                                <p><span>Explore All</span></p>
+                                <i class="bi bi-arrow-right-circle-fill"></i>
+                            </div>
+                        </div>
+                    </div></a>
+                </div>
+               <div class="exploreitem explorehome col-lg-6 col-md-12 col-sm-12">
+                <a href="undeveloped.html"><div class="explorediv">
+                        <div class="itemimage">
+                            <img src="assets/exploreimages/explorecats/learncode.jpg" alt="">
+                        </div>
+                        <div class="itemcontents">
+                            <h4>Learning Tools & More</h4>
+                            <p>Discover a variety of learning tools & educational apps in this category. Grow your skills, and enjoy the learning journey!</p>
+                            <div class="viewmore">
+                                <p><span>Explore All</span></p>
+                                <i class="bi bi-arrow-right-circle-fill"></i>
+                            </div>
+                        </div>
+                    </div></a> 
+                </div>
+                <div class="exploreitem explorehome col-lg-6 col-md-12 col-sm-12">
+                    <a href="undeveloped.html"><div class="explorediv">
+                        <div class="itemimage">
+                            <img src="assets/exploreimages/explorecats/designingtools.jpg" alt="">
+                        </div>
+                        <div class="itemcontents">
+                            <h4>Tools, Template Designs</h4>
+                            <p>A collection of app & web template designs to help spark ideas or speed up your next project. Explore & create with ease!</p>
+                            <div class="viewmore">
+                                <p><span>Explore All</span></p>
+                                <i class="bi bi-arrow-right-circle-fill"></i>
+                            </div>
+                        </div>
+                    </div></a>
+                </div>
+                <div class="exploreitem explorehome col-lg-6 col-md-12 col-sm-12">
+                    <a href="undeveloped.html"><div class="explorediv">
+                        <div class="itemimage">
+                            <img src="assets/exploreimages/explorecats/exploremore.jpg" alt="">
+                        </div>
+                        <div class="itemcontents">
+                            <h4>Explore More</h4>
+                            <p>Discover a variety of games & entertainment tools in this category. Explore the options, enjoy the experience, and have fun!</p>
+                            <div class="viewmore">
+                                <p><span>Explore All</span></p>
+                                <i class="bi bi-arrow-right-circle-fill"></i>
+                            </div>
+                        </div>
+                    </div></a>
+                </div>
             </div>
         </div>
      </section>
-    <!-- End mobile header -->
+    <!-- End of Main contents -->
 
-
-    <!-- info-->
-     <div class="info">
-        <div class="infodiv">
-            <div class="infoicon">
-                <img src="assets/images/icons/icons8-info-48.png" alt="">
-            </div>
-            <p>This Section is being developed, soon it will be live for exploration. Thank you for being part of this. <br>❤️☺️🫶 <br> <br>- <b>Myles</b> (Developer)</p>
-        </div>
+    <!-- below -->
+     <div class="container">
+        <a href="termsandconditions.html"><p class="mt-3 below-note">Terms and Conditions applied Ⓒ Creationprimal 2025</p></a>
      </div>
-    
-    <!-- End of info-->
 
 
+    <!-- Loader -->
+    <div class="indexloader">
+        <div id="pageloader">
+            <div id="container">
+                <div id="ring"></div>
+                <div id="ring"></div>
+                <div id="ring"></div>
+                <div id="ring"></div>
+            </div>
+        </div>
+        <h4>Explore</h4>
+        <p>Glad to have you here — let's Explore together!</p>
+    </div>
+    <!-- End of Loader -->
 
-
-
-     <!-- loader -->
-     
-     <!-- end of loader -->
 
 
 
@@ -101,11 +223,6 @@
         <a href="explore.html"><div class="nav-item active"><i class="bi bi-stars"></i></div></a>
         <a href="#"><div class="nav-item"><i class="bi bi-arrow-up"></i></div></a>
     </div>
-
-
-
-
-
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -120,5 +237,8 @@
     <script src="vendor/php-email-form/validate.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+    
 </body>
 </html>

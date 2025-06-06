@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+
+    <title>IQ - Dividing game</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/explorestyle.css">
+    <link rel="stylesheet" href="assets/dividinggame/style/main.css">
+    <link rel="stylesheet" href="assets/css/games.css">
+
+
+</head>
+
+<body style="padding-bottom: 0px !important; ">
+
+
+    <!-- header-->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex justify-content-between">
+
+        <div class="logo animate__animated animate__fadeInLeft">
+            <i class="goback bi bi-arrow-left-circle-fill"></i>
+            <h1><span>IQ - Dividing game</span></h1>
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+                <li><a class="nav-link scrollto active" href="index.html">Explore</a></li>
+                <li><a class="nav-link scrollto" href="games.html">Games</a></li>
+                <li><a class="nav-link scrollto" href="index.html#contact">Contacts</a></li>
+                <a href="login.html" class="btn-sign-in animate__animated animate__fadeInRight">Log in</a>
+            </ul>
+            
+        </nav>
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- mobile header -->
+    <section>
+        <div class="container-lg mobileheader">
+            <button title="Go Back" class="backbutton goback animate__animated animate__fadeInLeft">
+                <i class="bi bi-arrow-left-circle-fill"></i>
+            </button>
+            <div class="centertitle">
+                <h4>IQ - Dividing game</h4>
+            </div>
+            <div class="backbutton"></div>
+        </div>
+     </section>
+    <!-- End mobile header -->
+
+
+
+
+    <!-- center -->
+
+    <div class="container dividegame">
+        <div class="heading">
+            <div class="scores-container">
+                <div class="score-container">0</div>
+                <div class="best-container">0</div>
+            </div>
+        </div>
+        <p class="game-intro">Divide the numbers and get to the <strong>1 tile!</strong></p>
+
+        <div class="game-container">
+            <div class="game-message">
+                <p></p>
+                <div class="lower">
+                    <a style="display: none;" class="keep-playing-button">Keep going</a>
+                    <a class="retry-button">Try again</a>
+                </div>
+            </div>
+
+            <div class="grid-container">
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+
+            <div class="tile-container"></div>
+        </div>
+
+        <p class="game-explanation">
+            <strong class="important">How to play:</strong> <br> Use your <strong>arrow keys</strong> to move the tiles. <br> When two tiles with the same number touch, they <strong>divide!</strong> You win when you reach a tile with 1.
+        </p>
+        
+    </div>
+    <!-- End of Center -->
+
+
+
+    <!-- Display compatibility info-->
+    <div class="displayinfo animate__animated animate__fadeIn">
+        <div class="displayinfodiv">
+            <div class="displayinfoicon">
+                <img src="assets/exploreimages/icons/infoicon.png" alt="">
+            </div>
+            <p>This Game can only be played on a wide screen (laptop or Desktop) using keyboard arrows, Please shift to a wide display to access this game. Thank you! <br>❤️☺️🫶 <br> <br>- <b>Myles</b> (Developer)</p>
+        </div>
+     </div>
+    
+    <!-- End of info-->
+
+
+
+    <!-- below contents -->
+    <div class="gamebelow animate__animated animate__fadeIn mb-4">
+        <div class="belowinfo">
+            <a href="login.html" class="btn-link" title="login" class="gamelogin">
+                Log in
+            </a>
+            <a href="" class="btn-link" title="login" class="gamelogin">
+                <img src="assets/exploreimages/icons/googlelogo.png" alt="">
+                Google
+            </a>
+            <a href="" class="btn-link getsourcecode">
+                <img src="assets/exploreimages/icons/downloadicon.png" alt="">
+                Get Source Code 
+                <span>4.3k</span>
+                <i class="bi bi-code-slash"></i>
+            </a>
+        </div>
+        
+     </div>
+     <!-- below contents -->
+
+
+     <!-- Loader -->
+    <div class="indexloader">
+        <div id="pageloader">
+            <div id="container">
+                <div id="ring"></div>
+                <div id="ring"></div>
+                <div id="ring"></div>
+                <div id="ring"></div>
+            </div>
+        </div>
+        <h4>Math Game</h4>
+        <p>Enjoy the experience, and have fun!</p>
+    </div>
+    <!-- End of Loader -->
+
+
+
+    <!-- App Js-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/games.js"></script>
+    <script src="assets/dividinggame/js/main.js"></script>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/dividinggame/js/animframe_polyfill.js"></script>
+    <script src="assets/dividinggame/js/keyboard_input_manager.js"></script>
+    <script src="assets/dividinggame/js/html_actuator.js"></script>
+    <script src="assets/dividinggame/js/grid.js"></script>
+    <script src="assets/dividinggame/js/tile.js"></script>
+    <script src="assets/dividinggame/js/local_score_manager.js"></script>
+    <script src="assets/dividinggame/js/game_manager.js"></script>
+    <script src="assets/dividinggame/js/application.js"></script>
+
+</body>
+</html>

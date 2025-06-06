@@ -1,0 +1,147 @@
+
+
+
+/* snake game*/
+.retrosnakegame{
+    display: flex;
+    flex-direction: column;
+}
+.dividegame{
+    display: flex;
+    flex-direction: column;
+}
+.multitaskinggame{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 784px) {
+    .retrosnakegame{
+        display: none;
+    }
+    .dividegame{
+        display: none;
+    }
+    .multitaskinggame{
+        display: none;
+    }
+}
+a{
+    text-decoration: none;
+}
+
+/* game below*/
+
+.gamebelow{
+    position: fixed;
+    width: 680px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 997;
+}
+.gamebelow .belowinfo{
+    display: flex;
+    flex: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.143);
+    padding: 10px 12px;
+    border-radius: 50px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.397);
+}
+
+.gamebelow .btn-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 50px;
+    font-weight: 400;
+    text-decoration: none ;
+    border: 1px inset rgba(128, 128, 128, 0.439);
+    color: black;
+}
+.gamebelow .btn-link img{
+    height: 28px;
+    padding-right: 10px;
+}
+.gamebelow .btn-link i{
+    font-size: 25px;
+    padding-left: 15px;
+}
+.gamebelow .getsourcecode{
+    background-color: rgb(255, 248, 234);
+    border: 2px inset orange !important;
+}
+.gamebelow .btn-link:hover{
+    transition: 200ms;
+    background-color: #dce9fd;
+    border: 2px inset #2d79f3;
+    padding: 10px 35px;
+}
+.gamebelow .getsourcecode span{
+    color: grey;
+    padding-left: 10px;
+}
+
+
+@media (max-width: 784px) {
+    .gamebelow{
+        position: fixed;
+        width: 93%;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 997;
+    }
+    .gamebelow .btn-link{
+        padding: 4px 13px;
+        border-radius: 50px;
+    }
+    .gamebelow .btn-link:hover{
+        transition: 200ms;
+        background-color: #dce9fd;
+        border: 2px inset #2d79f3;
+        padding: 4px 15px;
+    }
+    .gamebelow .btn-link img{
+        height: 25px;
+        padding-right: 10px;
+    }
+}
+@media (max-width: 520px) {
+    .gamebelow{
+        position: fixed;
+        width: 93%;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 997;
+    }
+    .gamebelow .btn-link:nth-child(1), 
+    .gamebelow .btn-link:nth-child(2){
+        width: 48%; 
+        display: flex;
+        justify-content: center; align-items: center;
+        margin-bottom: 8px;
+    }
+    .gamebelow .btn-link:nth-child(3){
+        width: 100%; 
+        display: flex;
+        justify-content: center; align-items: center;
+    }
+    .gamebelow .btn-link:hover{
+        transition: 200ms;
+        background-color: #dce9fd;
+        border: 2px inset #2d79f3;
+        padding: 4px 5px;
+    }
+    .gamebelow .belowinfo{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 12px;
+        border-radius: 17px;
+    }
+}
