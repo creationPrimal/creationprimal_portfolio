@@ -38,6 +38,12 @@ const auth = getAuth(app);
             const loadingBtn = document.getElementById('loadingBtn');
         
             event.preventDefault()
+
+            if (!email) {
+                alert("Please enter your Email address.");
+                return;
+            }
+
             // confirm password before submitting
             if (password == confirmpassword) {
                 createUserWithEmailAndPassword(auth, email, password)
@@ -53,7 +59,13 @@ const auth = getAuth(app);
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
-                    alert(errorMessage)
+                    if (errorCode === 'auth/email-already-in-use') {
+                        alert("Email already in use! Please Use another email and try again.");
+                    } else if (errorCode === 'auth/weak-password') {
+                        alert("Password should be at least 6 characters! Please try again");
+                    } else {
+                        alert(`${errorMessage} (${errorCode})`);
+                    }
                     // ..
                 });
             } else {

@@ -3,7 +3,7 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-auth.js";
 
 
 // Your web app's Firebase configuration
@@ -33,6 +33,11 @@ const auth = getAuth(app);
             const password = document.getElementById('password').value;
             const submit = document.getElementById('submit');
             const loadingBtn = document.getElementById('loadingBtn');
+
+            if (!email) {
+                alert("Please enter your Email address.");
+                return;
+            }
         
             event.preventDefault()
             signInWithEmailAndPassword(auth, email, password)
@@ -48,7 +53,11 @@ const auth = getAuth(app);
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert(errorMessage)
+                if (errorCode === 'auth/invalid-credential') {
+                    alert("Incorrect Credentials. Please try again.");
+                } else {
+                    alert(`${errorMessage} (${errorCode})`);
+                }
                 // ..
             });
         
@@ -92,4 +101,40 @@ const auth = getAuth(app);
         })
     }
 
+
+
+    // reset password after forgetting
+    
+    const forgotpassword = document.getElementById('forgotpassword');
+    
+    if (forgotpassword) {
+        forgotpassword.addEventListener('click', (e) => {
+
+            const useremail = document.getElementById('useremail').value.trim();
+            e.preventDefault();
+
+            if (!useremail) {
+                alert("Please enter your email address.");
+                return;
+            }
+
+            sendPasswordResetEmail(auth, useremail).then(() => {
+                // Password reset email sent!
+                // ..
+                alert("Password Reset Email sent to your email.")
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+                alert(errorMessage)
+            });
+        })
+    }
+
+    
+
 })()
+
+
+

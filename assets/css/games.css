@@ -72,6 +72,8 @@ a{
     padding-left: 15px;
 }
 .gamebelow .getsourcecode{
+    display: flex;
+    justify-content: center;
     background-color: rgb(255, 248, 234);
     border: 2px inset orange !important;
 }
