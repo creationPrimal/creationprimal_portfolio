@@ -1301,7 +1301,7 @@ input[type="number"] {
         width: 85%;
     }
     .displayinfoicon{
-        min-height: 60px; min-width: 60px;
+        min-height: 50px; min-width: 60px;
         overflow: hidden;
     }
 }
