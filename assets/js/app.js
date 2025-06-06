@@ -233,3 +233,54 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+// show password or hide
+// TODO: Work on Thos
+document.addEventListener("DOMContentLoaded", () => {
+  const sees = document.querySelectorAll(".see");
+  const hides = document.querySelectorAll(".hide");
+  const inputs = document.querySelectorAll("input[type'password']");
+  let isActive = false;
+
+  
+  sees.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      isActive = !isActive;
+
+      inputs.forEach(input => {
+        input.type = isActive ? "text" : "password";
+      });
+
+      sees.forEach(seebtn => {
+        seebtn.style.display = isActive ? "none" : "flex";
+      });
+
+      hides.forEach(hidebtn => {
+        hidebtn.style.display = isActive ? "flex" : "none";
+      });
+    });
+  });
+
+  hides.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      isActive = !isActive;
+
+      inputs.forEach(input => {
+        input.type = isActive ? "text" : "password";
+      });
+
+      sees.forEach(seebtn => {
+        seebtn.style.display = isActive ? "none" : "flex";
+      });
+
+      hides.forEach(hidebtn => {
+        hidebtn.style.display = isActive ? "flex" : "none";
+      });
+    });
+  });
+})
+
+(() => {
+  
+
+})()
+

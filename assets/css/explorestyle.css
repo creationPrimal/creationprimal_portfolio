@@ -662,6 +662,84 @@ input[type="number"] {
   appearance: none;
 }
   
+.registerBtn{
+    display: flex;
+}
+.loadingBtn{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+    background-color: #151717;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+}
+.showLoadingBtn{
+    display: flex;
+}
+.hideregisterBtn{
+    display: none;
+}
+/* register loader */ 
+.registerloading {
+    --speed-of-animation: 0.9s;
+    --gap: 6px;
+    --first-color: var(--lightblue);
+    --second-color: var(--lightblue);
+    --third-color: var(--lightblue);
+    --fourth-color: var(--lightblue);
+    --fifth-color: var(--lightblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    gap: 6px;
+    height: 50px;
+}
+
+.registerloading span {
+    width: 5px;
+    height: 30px;
+    background: var(--first-color);
+    animation: scale var(--speed-of-animation) ease-in-out infinite;
+}
+
+.registerloading span:nth-child(2) {
+    background: var(--second-color);
+    animation-delay: -0.8s;
+}
+
+.registerloading span:nth-child(3) {
+    background: var(--third-color);
+    animation-delay: -0.7s;
+}
+
+.registerloading span:nth-child(4) {
+    background: var(--fourth-color);
+    animation-delay: -0.6s;
+}
+
+.registerloading span:nth-child(5) {
+    background: var(--fifth-color);
+    animation-delay: -0.5s;
+}
+
+@keyframes scale {
+ 0%, 40%, 100% {
+  transform: scaleY(0.05);
+ }
+
+ 20% {
+  transform: scaleY(1);
+ }
+}
       
 
 @media (max-width: 784px) {
