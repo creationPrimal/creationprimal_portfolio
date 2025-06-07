@@ -1291,7 +1291,26 @@ input[type="number"] {
 }
 
 
-
+/* Payment */
+.paymentcenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; width: 100vw;
+    color: white;
+    background-color: white;
+}
+.paymentcenter .paymentdiv{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    
+}
+#paypal-container-RDU8NGX2Y6KZC{
+    width: 80%;
+    min-width: 400px;
+}
 
 
 
@@ -1304,7 +1323,13 @@ input[type="number"] {
         min-height: 50px; min-width: 60px;
         overflow: hidden;
     }
+    #paypal-container-RDU8NGX2Y6KZC{
+        min-width: 350px;
+    }
 }
+
+
+
 
 /*--------------------------------------------------------------
 # End of Info Tab
