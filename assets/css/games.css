@@ -13,6 +13,7 @@
 .multitaskinggame{
     display: flex;
     flex-direction: column;
+    transform: scale(0.85);
 }
 
 @media (max-width: 784px) {
