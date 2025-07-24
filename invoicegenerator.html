@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Free Invoice Generator</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/explorestyle.css">
+    <link rel="stylesheet" href="assets/invoice_generator/css/style.css">
+
+
+</head>
+
+<body style="padding-bottom: 0px !important; background-color: rgba(232, 232, 232, 0.762);">
+
+
+    <!-- header-->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex justify-content-between">
+
+            <div class="logo animate__animated animate__fadeInLeft">
+                <i class="goback bi bi-arrow-left-circle-fill"></i>
+                <h1><span>Invoice Generator</span></h1>
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="index.html">Explore</a></li>
+                    <li><a class="nav-link scrollto" href="exploretools.html">Tools</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#contact">Contacts</a></li>
+                    <a href="login.html" class="btn-sign-in animate__animated animate__fadeInRight">Log in</a>
+                </ul>
+                
+            </nav>
+
+            
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- mobile header -->
+    <section>
+        <div class="container-lg mobileheader">
+            <button title="Go Back" class="backbutton goback animate__animated animate__fadeInLeft">
+                <i class="bi bi-arrow-left-circle-fill"></i>
+            </button>
+            <div class="centertitle">
+                <h4>Invoice Generator</h4>
+            </div>
+            <div class="backbutton"></div>
+
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-list"></i>
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#sidediv"><i class="bi bi-cash-coin"></i> Choose Currency</a></li>
+                    <li><a class="dropdown-item" href="#sidediv"><i class="bi bi-cloud-download-fill"></i> Download Invoice</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="sharePage()"><i class="bi bi-share-fill"></i> Share to others</a></li>
+                </ul>
+            </div>
+        </div>
+     </section>
+    <!-- End mobile header -->
+
+
+
+
+    <!-- center -->
+
+    <div class="container invoicegenerator">
+       <div class="invoicecenter">
+            <div class="col-lg-9 col-md-12 col-sm-12 maindiv" >
+                <div class="titlelogog">
+                    <input type="text" class="invoice-title" id="invoiceName" placeholder="Invoice Title" value="#Invoice1">
+                    <div class="invoice-logo-div mb-4">
+                        <div class="imagelogo"><i class="bi bi-image-fill"></i> <p>Logo</p></div>
+                        <input type="file" class="invoice-logo" name="" id="imageInput">
+                        <div class="logo-img-div">
+                            <img id="preview" src="#" alt="Image preview"/>
+                        </div>
+                        <div class="logo-delete" id="logodelete" onclick="removeLogo()"><i class="bi bi-trash-fill"></i></div>
+                    </div>
+                </div>
+                <!-- bill info -->
+                <div class="bill-info">
+                    <div class="bill-from">
+                        <h5>From</h5>
+                        <div class="bill-inputs">
+                            <div class="bill-input">
+                                <p>Name</p>
+                                <input type="text" name="" id="from-name" placeholder="Business Name" required>
+                            </div>
+                            <div class="bill-input">
+                                <p>Email</p>
+                                <input type="email" name="" id="from-email" placeholder="@email.com" required>
+                            </div>
+                            <div class="bill-input">
+                                <p>Address</p>
+                                <input type="text" name="" id="from-address" placeholder="Street" required>
+                            </div>
+                            <div class="bill-input">
+                                <p></p>
+                                <input type="text" name="" id="from-city" placeholder="City / State">
+                            </div>
+                            <div class="bill-input">
+                                <p>Phone</p>
+                                <input type="number" name="" id="from-phone" placeholder="+255 *" required>
+                            </div>
+                            <div class="bill-input">
+                                <p>Tax Payer ID</p>
+                                <input type="number" name="" id="from-tin" placeholder="Business Number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bill-to">
+                        <h5>Bill To</h5>
+                        <div class="bill-inputs">
+                            <div class="bill-input">
+                                <p>Name</p>
+                                <input type="text" name="" id="to-name" placeholder="Client Name" required>
+                            </div>
+                            <div class="bill-input">
+                                <p>Email</p>
+                                <input type="email" name="" id="to-email" placeholder="@client.com" required>
+                            </div>
+                            <div class="bill-input">
+                                <p>Address</p>
+                                <input type="text" name="" id="to-address" placeholder="Street" required>
+                            </div>
+                            <div class="bill-input">
+                                <p>Phone</p>
+                                <input type="number" name="" id="to-phone" placeholder="+255 *" required>
+                            </div>
+                            <div class="bill-input">
+                                <p>Date</p>
+                            <input type="date" name="" id="to-date" placeholder="date">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- Content titles -->
+                 <div class="content-titles">
+                    <div class="description-description"><h6>DESCRIPTION</h6></div>
+                    <div class="description-rate"><h6>Rate</h6></div>
+                    <div class="description-qty"><h6>Quantity</h6></div>
+                    <div class="description-amount"><h6>Amount</h6></div>
+                 </div>
+                 <!-- Content data -->
+                 <div class="calculations-div" id="calculations-div">
+                    <!--  data -->
+                    <div class="row-item">
+                        <div class="content-data" id="content-data">
+                            <div class="content-desc">
+                                
+                                <div class="desc-inputs">
+                                    <input class="mb-2" id="item-1" type="text" placeholder="item Description">
+                                    <textarea name="" id="desc-1" rows="4" placeholder="Additional Details"></textarea>
+                                </div>
+                            </div>
+                            <div class="content-rate">
+                                <p>Rate</p>
+                                <input class="value1" type="number" id="rate-1" oninput="calculateAmount(1,1,1)" placeholder="00" value="00" required>
+                            </div>
+                            <div class="content-qty">
+                                <p>Quantity</p>
+                                <input class="value2" type="number" id="qty-1" oninput="calculateAmount(1,1,1)" placeholder="0" value="1" required>
+                            </div>
+                            <div class="content-amount">
+                                <input class="" type="text" id="result-1" placeholder="00" value="00" disabled>
+                            </div>
+                        </div>
+                         <hr>
+                    </div>
+
+
+
+                    
+                </div>
+                <!-- Add Button-->
+                <div class="add-and-total">
+                    <button class="content-add mt-2 mb-3" onclick="addNewItem ()"><i class="bi bi-plus-lg"></i> Add Item</button>
+                    <div class="total-div mt-1">
+                        <p><span>Total:</span></p>
+                        <div class="total">
+                            <p><b id="totalamount"> 00</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="notes mt-2">
+                    <textarea name="" id="" rows="5" placeholder="Notes - Any relevant information not covered, uch as special instructions, exceptions, or additional context."></textarea>
+                </div>
+            </div>
+
+
+
+            <!-- bill info -->
+            <div class="col-lg-3 col-md-12 col-sm-12 sidediv" id="sidediv">
+                <div class="sidecontents">
+                    <div class="currency-title"><i class="bi bi-cash-coin"></i><p>Currency</p></div>
+                    <hr>
+                    <select class="currency-btn form-select mb-3" id="currencyBtn" onchange="selectedCurrency()" aria-label="Default select example">
+                        <option value="USD" selected id="currencydisplay">Change Currency</option>
+                        <option value="USD">USD - US Dollar</option>
+                        <option value="Tsh">Tsh - Tanzanian Shillings</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="GBP">GBP - British Pound</option>
+                        <option value="KES">KES - Kenyan Shilling</option>
+                        <option value="ZAR">ZAR - South African Rand</option>
+                        <option value="CNY">CNY - Chinese Yuan</option>
+                    </select>
+                    <!-- <button class="preview-btn mb-3" id="previewBtn">Preview Invoice</button> -->
+                    <button class="print-btn" id="downloadpdf">Download Invoice (pdf)</button>
+                    <hr class="mt-5">
+                    <button class="invite-btn mb-3" onclick="sharePage()"><i class="bi bi-share"></i> Invite Others</button>
+                    <button class="invite-btn mb-3">😊 Buy Me Coffee</button>
+                </div>
+            </div>
+       </div>
+    </div>
+    <!-- End of Center -->
+
+
+
+
+
+    <section id="invoicePreview">
+        <div class="invoicePreviewBox" id="invoice">
+            <div class="inv-innercontents">
+                <div class="innerfromto mb-3">
+                    <div class="inner-logo" onclick="downloadInvoicePDF()"><img src="" alt="" id="newLogo"></div>
+                    <div class="inner-bill-from">
+                        <p class="billname mb-2" id="newName"></p>
+                        <p id="newAddress"></p>
+                        <p id="businessNo">Business No: <span id="newTIN"></span></p>
+                        <p id="newEmail"></p>
+                        <p id="newPhone"></p>
+                        
+                    </div>
+                    <div class="inner-bill-from">
+                        <p class="billname" id="newInvoiceName"></p>
+                        <p></p>
+                        <p></p>
+                        <p>Balance Due: <span id="dueBalance">00</span></p>
+                    </div>
+                </div>
+                <hr class="mb-3 mt-2">
+                <div class="inner-bill-to">
+                    <h5>Bill To</h5>
+                    <p class="billname mb-2" id="newBillTo"></p>
+                    <p id="newBillAddress"></p>
+                    <p id="newEmailDiv"><i class="bi bi-envelope-at-fill"></i> <span id="newBillEmail"></span></p>
+                    <p id="newPhoneDiv"><i class="bi bi-telephone-plus"></i> <span id="newBillPhone"></span></p>
+                    <p><i class="bi bi-calendar-week"></i> <span id="newBillDate"></span></p>
+                </div>
+                <!-- Content titles -->
+                 <div class="inner-content-titles mt-3 mb-2">
+                    <div class="inner-description-description"><p>DESCRIPTION</p></div>
+                    <div class="inner-description-rate"><p>Rate</p></div>
+                    <div class="inner-description-qty"><p>Quantity</p></div>
+                    <div class="inner-description-amount"><p>Amount</p></div>
+                 </div>
+                <!-- Content list -->
+                 <div id="previewItems">
+                    <!-- <div class="lits-item">
+                        <div class="inner-content-item mt-2" id="list-1">
+                            <div class="inner-description">
+                                <p class="inner-desc-title">Item Description adding a long title paragrapgh djcnjccdc</p>
+                                <p class="inner-desc-desc mt-3 mb-3">Aditional details kept below the main input data adding some new flavours and so far</p>
+                            </div>
+                            <div class="inner-rate"><p>20,000</p></div>
+                            <div class="inner-qty"><p>4</p></div>
+                            <div class="inner-amount"><p>80,000</p></div>
+                        </div>
+                        <hr>
+                    </div> -->
+                 </div>
+                 <!-- <hr> -->
+                  <div class="inner-content-item mt-3 mb-3">
+                    <div class="inner-description"><p></p></div>
+                    <div class="inner-rate inner-total"><p>TOTAL</p></div>
+                    <div class="inner-qty"><p></p></div>
+                    <div class="inner-amount inner-total-amnt"><p id="newTotal">00</p></div>
+                 </div>
+                 <p class="additionalinfo mt-5 mb-5">Aditional details kept below the main input data adding some new flavours and so far </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+     <!-- Loader -->
+    <div class="indexloader">
+        <div id="pageloader">
+            <div id="container">
+                <div id="ring"></div>
+                <div id="ring"></div>
+                <div id="ring"></div>
+                <div id="ring"></div>
+            </div>
+        </div>
+        <h4>Invoice Generator</h4>
+        <p>Enjoy the experience, and have fun!</p>
+    </div>
+    <!-- End of Loader -->
+
+
+
+    <!-- App Js-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/invoice_generator/js/app.js"></script>
+    <script type="module" src="assets/js/auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

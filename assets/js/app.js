@@ -207,10 +207,10 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 // prevent right click
-document.addEventListener("contextmenu", (event) => {
-  event.preventDefault();
-  alert("Sorry! You can not access context menu! 🙄");
-})
+// document.addEventListener("contextmenu", (event) => {
+//   event.preventDefault();
+//   alert("Sorry! You can not access context menu! 🙄");
+// })
 
 //prevent short cut clicks
 document.addEventListener("keydown", (e) => {
@@ -238,7 +238,7 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("DOMContentLoaded", () => {
   const sees = document.querySelectorAll(".see");
   const hides = document.querySelectorAll(".hide");
-  const inputs = document.querySelectorAll("input[type'password']");
+  const inputs = document.querySelectorAll(".password");
   let isActive = false;
 
   
@@ -279,8 +279,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 })
 
-(() => {
-  
-
-})()
 

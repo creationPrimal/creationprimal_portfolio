@@ -25,27 +25,27 @@ const auth = getAuth(app);
 
     onAuthStateChanged(auth, (user) => {
 
-    const signInBtns = document.querySelectorAll('.btn-sign-in');
-    const gameLogInBtns = document.querySelectorAll('.game-login');
-    const sourcecodeBtns = document.querySelectorAll('.getsourcecode');
-    const logoutBtn = document.getElementById('logoutBtn');
+        const signInBtns = document.querySelectorAll('.btn-sign-in');
+        const gameLogInBtns = document.querySelectorAll('.game-login');
+        const sourcecodeBtns = document.querySelectorAll('.getsourcecode');
+        const logoutBtn = document.getElementById('logoutBtn');
 
 
-     // User is logged in ******************************************
-    if (user) {
+        // User is logged in ******************************************
+        if (user) {
 
-        signInBtns.forEach(btn => { btn.style.display = "none"; })
-        gameLogInBtns.forEach(btn => { btn.style.display = "none"; })
-        sourcecodeBtns.forEach(btn => { btn.style.width = "100%"; })
-        logoutBtn.style.display = "flex";
+            signInBtns.forEach(btn => { btn.style.display = "none"; })
+            gameLogInBtns.forEach(btn => { btn.style.display = "none"; })
+            sourcecodeBtns.forEach(btn => { btn.style.width = "100%"; })
+            logoutBtn.style.display = "flex";
 
-    } 
+        } 
 
-    // No user is logged in ****************************************
-    else {
-        
-        
-    }
+        // No user is logged in ****************************************
+        else {
+            
+            
+        }
     });
 
 
@@ -58,18 +58,20 @@ const auth = getAuth(app);
 
     // log out ******************************************************
 
+    const logoutBtn = document.getElementById('logoutBtn');
+
     if (logoutBtn) {
-    logoutBtn.addEventListener('click', () => {
-        signOut(auth)
-        .then(() => {
-            alert("You have been logged out.");
-            // Optionally redirect or update UI
-            window.location.reload(); // or window.location.href = "login.html";
-        })
-        .catch((error) => {
-            alert("Error logging out: " + error.message);
+        logoutBtn.addEventListener('click', () => {
+            signOut(auth)
+            .then(() => {
+                alert("You have been logged out.");
+                // Optionally redirect or update UI
+                window.location.reload(); // or window.location.href = "login.html";
+            })
+            .catch((error) => {
+                alert("Error logging out: " + error.message);
+            });
         });
-    });
     }
 
 })()
