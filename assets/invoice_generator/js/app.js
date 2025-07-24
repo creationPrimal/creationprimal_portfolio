@@ -349,34 +349,54 @@ function downloadInvoicePDF() {
 
 
 
-//   const overlay = document.getElementById('invoice-overlay');
-//   const popupContent = document.getElementById('popup-content');
+// display instructions on small screen
+(()=>{
+    const smallscreendiv = document.querySelector('.smallscreeninstruct');
 
-//   // Collect values
-//   const fromName = document.getElementById('from-name').value;
-//   const fromEmail = document.getElementById('from-email').value;
-//   const fromAddress1 = document.getElementById('from-address').value;
-//   const fromAddress2 = document.getElementById('from-city').value;
-//   const fromPhone = document.getElementById('from-phone').value;
-//   const fromTin = document.getElementById('from-tin').value;
+    smallscreendiv.innerHTML = 
+        `
+        <div class="smallinstruct" id="smallinstruct">
+            <h4>How To Use Our Free Invoice Generator</h4>
+            <p>These step by step instructions will show you how to create an invoice that includes all the standard elements of a 
+                professional invoice. Below, we'll dive into how you can customize a generic invoice to be unique to your business.
+            </p>
+            <p class="mt-2 mb-3">The first time you create an invoice, you'll need to add some information to the blank invoice template.</p>
+            <p class="mb-2">1. Add your company details in the <b>From section</b>, including the name, phone number, and address</p>
+            <p class="mb-2">2. Fill out your client's details in the <b>For section</b>, including name, email, and address</p>
+            <p class="mb-2">3. Add each line item, along with a description, rate, and quantity</p>
+            <p class="mb-2">4. If applicable, enter the tax rate, type of currency, and discount amount</p>
+            <p class="mb-2">5. Write payment instructions and terms in <b>Notes</b> section</p>
+            <p class="mb-2">6. Customize your invoice by adding a logor</p>
 
-//   const billName = document.getElementById('bill-name').value;
-//   const billEmail = document.getElementById('bill-email').value;
-//   const billAddress = document.getElementById('bill-address').value;
-//   const billPhone = document.getElementById('bill-phone').value;
-//   const billDate = document.getElementById('bill-date').value;
+            <h4 class="mt-4">How To Download Invoice</h4>
+            <p>Your invoice is all set! To keep a copy, just click the Download button and save it as a PDF. 
+                You can send it to your clients, print it, or store it for later. 
+                <br> <br>
+                Want to help others? Share the link so your friends or team can try out our free Invoice Generator and make their 
+                own invoices in just a few clicks.
+            </p>
 
-//   const description = document.getElementById('item-description').value;
-//   const details = document.getElementById('item-details').value;
-//   const rate = document.getElementById('item-rate').value;
-//   const quantity = document.getElementById('item-quantity').value;
-//   const amount = document.getElementById('item-amount').value;
-//   const total = document.getElementById('total-amount').innerText;
+            <h4 class="mt-4">Our Free Invoice Generator Saves You Time</h4>
+            <p class="mt-2 mb-3">When you use our invoice generator you save yourself a lot of time and effort. Here are some of the reasons why:
+            </p>
+            <p class="mb-2">1. Automatically save your clients and items so they're available the next time you're writing an invoice</p>
+            <p class="mb-2">2. Organize your invoices in seconds</p>
+            <p class="mb-2">3. Use a professionally designed template that's compatible with printers and mobile devices</p>
+            <p class="mb-2">4. See a full overview of your business effortlessly and in moments</p>
+            <p class="mb-2">5. Know when your business invoice is viewed by a customer</p>
+            <p class="mb-2">6. Process credit cards online or on location</p>
 
+            <h4 class="mt-4">Why is Our Invoice Generator Free</h4>
+            <p>We decided to make our Invoice Generator free for everyone because we believe every business, freelancer, and entrepreneur 
+                should have access to simple tools that help them save time and money. Our goal is to empower you to create professional invoices 
+                without extra costs, so you can focus on growing your business.
+            </p>
 
-
-
-
+            <hr>
+            <p class="copyrightbelow mb-5 mt-2">2025 © All Rights reserved. Developed and maintained by: <a href="mailto: creationprimal@gmail.com"><b>Creation Primal</b></a></p>
+        </div>
+        `
+})()
 
 
 

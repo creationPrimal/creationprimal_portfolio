@@ -736,6 +736,59 @@ input[type="text"] {
 
 
 
+.instruct{
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+}
+.smallinstruct{
+    display: none;
+}
+.instruct h4{
+    font-weight: bold;
+}
+.instruct p{
+    font-size: 16px;
+    line-height: 20px;
+}
+.instruct a{
+    color: rgb(0, 140, 195);
+}
+.instruct a:hover{
+    color: var(--orangered);
+}
+
+@media (max-width: 991px) {
+    .instruct{
+        display: none;
+    }
+    .smallinstruct{
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+    }
+    .smallinstruct h4{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .smallinstruct p{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .smallinstruct a{
+        color: rgb(0, 140, 195);
+    }
+    .smallinstruct a:hover{
+        color: var(--orangered);
+    }
+    .copyrightbelow{
+        text-align: center;
+    }
+}
+
+
+
+
 
 
 
