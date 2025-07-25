@@ -323,10 +323,15 @@ document.addEventListener("DOMContentLoaded",() => {
 
 function downloadInvoicePDF() {
   const element = document.getElementById('invoice');
+  const invoicePreview = document.getElementById('invoicePreview');
   const invoiceName = document.getElementById('invoiceName').value || "";
+
+  const originalDisplay = element.style.display;
 
   //element.style.width = '794px';
   element.style.padding = '40px'; // Adjust for nice inner spacing
+  invoicePreview.style.display = 'flex'; // show the preview div so to capture data
+  invoicePreview.style.left = '-9999px';
 
   const options = {
     margin: 0,
@@ -345,6 +350,7 @@ function downloadInvoicePDF() {
   };
 
   html2pdf().set(options).from(element).save();
+  invoicePreview.style.display = 'none'; // remove the preview btn
   // alert user
   alert('Your Invoice has been Created successfully, Press "Ok" to download it. Thank you for using our tool. 😊🫶❤️')
 }
@@ -475,9 +481,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handle Decline
     declineBtn.addEventListener('click', () => {
-        localStorage.setItem('cookiesAccepted', 'false');
-        popCache.style.display = 'none'; // Hide popup
-        alert("Some features may not work without cookies."); 
+        const confirmDecline = confirm("Are you sure you want to decline cookies? Some features may not work without them. 🙄😢");
+
+        if (confirmDecline) {
+            // User confirmed decline
+            localStorage.setItem('cookiesAccepted', 'false');
+            popCache.style.display = 'none'; // Hide popup
+            alert("You declined cookies. Some features may not work.");
+        } else {
+            // User canceled, treat as accepted
+            localStorage.setItem('cookiesAccepted', 'true');
+            popCache.style.display = 'none'; // Hide popup
+            alert("Cookies accepted! Enjoy full functionality. 😊❤️");
+        }
     });
 
 
