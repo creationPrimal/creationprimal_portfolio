@@ -241,6 +241,7 @@ document.addEventListener("DOMContentLoaded",() => {
         const billToEmail = document.getElementById('to-email').value || "";
         const billToPhone = document.getElementById('to-phone').value || "";
         const billDate = document.getElementById('to-date').value || "";
+        const notes = document.getElementById('notes').value || "";
 
         const savedLogo = localStorage.getItem("invoiceLogo");
 
@@ -256,6 +257,7 @@ document.addEventListener("DOMContentLoaded",() => {
         document.getElementById('newBillEmail').textContent = billToEmail;
         document.getElementById('newBillPhone').textContent = billToPhone;
         document.getElementById('newBillDate').textContent = billDate;
+        document.getElementById('newNotes').textContent = notes;
 
         // total
         document.getElementById('newTotal').textContent = document.getElementById('totalamount').textContent
