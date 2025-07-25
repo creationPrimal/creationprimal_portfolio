@@ -48,7 +48,14 @@ const auth = getAuth(app);
                 submit.style.display = 'none';
                 loadingBtn.style.display = 'flex';
                 // ...
-                window.location.href = "explore.html"
+                // Check if there's a saved redirect page
+                const redirectUrl = localStorage.getItem("redirectAfterLogin") || "explore.html";
+
+                // Clear it after use
+                localStorage.removeItem("redirectAfterLogin");
+
+                // Redirect the user back
+                window.location.href = redirectUrl;
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -86,7 +93,14 @@ const auth = getAuth(app);
                 const user = result.user;
                 // IdP data available using getAdditionalUserInfo(result)
                 // ...
-                window.location.href = "explore.html"
+                // Check if there's a saved redirect page
+                const redirectUrl = localStorage.getItem("redirectAfterLogin") || "explore.html";
+
+                // Clear it after use
+                localStorage.removeItem("redirectAfterLogin");
+
+                // Redirect the user back
+                window.location.href = redirectUrl;
             }).catch((error) => {
                 // Handle Errors here.
                 const errorCode = error.code;

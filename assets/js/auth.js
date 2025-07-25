@@ -29,6 +29,8 @@ const auth = getAuth(app);
         const gameLogInBtns = document.querySelectorAll('.game-login');
         const sourcecodeBtns = document.querySelectorAll('.getsourcecode');
         const logoutBtn = document.getElementById('logoutBtn');
+        // invoice generator
+        const requiredBtns = document.querySelectorAll('.requirelogin');
 
 
         // User is logged in ******************************************
@@ -37,6 +39,7 @@ const auth = getAuth(app);
             signInBtns.forEach(btn => { btn.style.display = "none"; })
             gameLogInBtns.forEach(btn => { btn.style.display = "none"; })
             sourcecodeBtns.forEach(btn => { btn.style.width = "100%"; })
+            requiredBtns.forEach(btn => { btn.style.display = "none"; })
             logoutBtn.style.display = "flex";
 
         } 

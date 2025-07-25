@@ -401,6 +401,17 @@ function downloadInvoicePDF() {
 
 
 
+// redirect user to login page
+document.addEventListener("DOMContentLoaded", () => {
+    const innerbox = document.querySelector('.requirelogin');
+    // redirect to login and save the route user was in before
+    innerbox.addEventListener("click", () => {
+        localStorage.setItem("redirectAfterLogin", window.location.href);
+        window.location.href = "login.html";        
+    })
+
+})
+
 
 
 
