@@ -343,6 +343,8 @@ function downloadInvoicePDF() {
   };
 
   html2pdf().set(options).from(element).save();
+  // alert user
+  alert('Your Invoice has been Created successfully, Press "Ok" to download it. Thank you for using our tool. 😊🫶❤️')
 }
 
 
