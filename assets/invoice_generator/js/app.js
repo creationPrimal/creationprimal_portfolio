@@ -448,8 +448,8 @@ document.addEventListener("DOMContentLoaded", () => {
             We design and build websites and mobile apps — check us out if you're interested!
        </p>
         <div class="cachebtns">
-             <a href="mailto: creationprimal@gmail.com"><button class="cookieaccept">Contact Us</button></a>
-            <a href="index.html" target="_blank" rel="noopener noreferrer"><button class="cookiedecline">Explore</button></a>
+             <a href="mailto: creationprimal@gmail.com"><button class="cookieaccept">Contacts</button></a>
+            <a href="index.html" target="_blank" rel="noopener noreferrer"><button class="cookiedecline adexplore">Explore</button></a>
         </div>
     </div>
     `

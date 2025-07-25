@@ -898,6 +898,35 @@ input[type="text"] {
 }
 
 
+@media (max-width: 1200px) and (min-width: 991px) {
+    .cachepopup .cachebox .cachebtns button{
+        padding: 0px 15px 0px 15px;
+        margin: 0px 3px;
+    }
+    .cachepopup .cachebox .cachebtns .adexplore{
+        display: none;
+    }
+    .currency-title img{
+        height: 30px;
+    }
+    .currency-title p {
+        margin: 0px;
+        font-size: 15px;
+        line-height: 18px;
+        padding-left: 10px;
+    }
+    #downloadpdf {
+        font-size: 15px;
+    }
+    .currency-btn{
+        font-size: 14px;
+    }
+    .cachepopup .cachebox img{
+        height: 40px;
+    }
+}
+
+
 
 
 
