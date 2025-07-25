@@ -413,5 +413,76 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
+// show cookies pop up
+document.addEventListener("DOMContentLoaded", () => {
+
+    const box = document.querySelector('.cachepopup');
+    
+    box.innerHTML = 
+    `
+    <hr class="mt-1 mb-4">
+    <div class="cachebox" id="popcache">
+        <div class="popupicons">
+        <img src="assets/images/icons/cookies.png" alt="">
+        </div>
+        <p class="title">We Use Cookies.</p>
+        <p class="body">
+            This website uses cookies to ensure you get the best experience on our site.
+       </p>
+        <div class="cachebtns">
+            <button class="cookieaccept" id="acceptBtn">Got it!</button>
+            <button class="cookiedecline" id="declineBtn">Decline</button>
+        </div>
+    </div>
+
+    <div class="cachebox mt-3" id="popad">
+        <div class="popupicons">
+            <img src="assets/images/icons/needwebsite.png" alt=""> 
+            <img src="assets/images/icons/appstore.png" alt="">
+            <img src="assets/images/icons/playstore.png" alt="">
+        </div>
+        <p class="title">Need a Software?</p>
+        <p class="body">
+            We design and build websites and mobile apps — check us out if you're interested!
+       </p>
+        <div class="cachebtns">
+             <a href="mailto: creationprimal@gmail.com"><button class="cookieaccept">Contact Us</button></a>
+            <a href="index.html" target="_blank" rel="noopener noreferrer"><button class="cookiedecline">Explore</button></a>
+        </div>
+    </div>
+    `
+
+    const popCache = document.getElementById('popcache');
+    const popAd = document.getElementById('popad');
+    const acceptBtn = document.getElementById('acceptBtn');
+    const declineBtn = document.getElementById('declineBtn');
+
+    // Show only if user hasn’t made a choice before
+    const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    if (cookiesAccepted !== null) {
+        popCache.style.display = 'none';
+    }
+
+    // Handle Accept
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        popCache.style.display = 'none'; // Hide popup
+    });
+
+    // Handle Decline
+    declineBtn.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'false');
+        popCache.style.display = 'none'; // Hide popup
+        alert("Some features may not work without cookies."); 
+    });
+
+
+    
+
+})()
+
+
+
+
 
 

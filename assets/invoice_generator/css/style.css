@@ -118,7 +118,11 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 6px;
     padding: 8px;
     color: white;
-    background-color: var(--orangered);
+    background-color: rgb(0, 185, 0);
+}
+.print-btn:hover{
+     background-color: var(--lightblue);
+     transition: 200ms;
 }
 .currency-btn{
     border-radius: 6px;
@@ -126,16 +130,36 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 .invite-btn{
-    border: 0.3px solid grey;
+    border: 1px solid rgb(0, 185, 0);
     border-radius: 6px;
     padding: 10px;
     width: 100%;
+    color: black;
     font-size: 16px;
-    background-color: white;
+    background-color: rgba(0, 128, 0, 0.151);
+}
+.invite-btn:hover {
+    background-color: rgb(0, 185, 0);
+    color: white;
+    transition: 200ms;
+}
+.invite-btn:hover i{
+    color: white;
+}
+.invite-btn:nth-child(1) {
+    background-color: gold;
+    border: none;
+}
+.invite-btn:nth-child(1):hover{
+    color: white;
+    background-color: rgb(0, 185, 0);
 }
 .invite-btn i{
     color: green;
     padding-right: 10px;
+}
+.invite-btn img{
+    height: 30px;
 }
 .sidediv .line-separator {
     height: 10px;
@@ -146,9 +170,14 @@ p, h1, h2, h3, h4, h5, h6 {
 .currency-title {
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+.currency-title img{
+    height: 40px;
 }
 .currency-title p {
     margin: 0px;
+    font-size: 20px;
     padding-left: 10px;
 }
 .currency-title i {
@@ -490,7 +519,7 @@ input[type="text"] {
         width: 100%;
         margin-bottom: 5px;
     }
-    .content-rate, .content-amount {
+    .content-rate, .content-qty, .content-amount {
         width: 100%;
         margin-bottom: 10px;
     }
@@ -503,6 +532,22 @@ input[type="text"] {
     .content-rate p, .content-qty p{
         display: flex;
         width: 100px;
+    }
+    .total-div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+    }
+    .total-div span{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .total-div .total{
+        width: 70%;
+    }
+    .notes{
+        padding-top: 30px;
     }
 }
 
@@ -793,6 +838,63 @@ input[type="text"] {
     top: 0; bottom: 0; right: 0; left: 0;
     background-color: rgba(0, 0, 0, 0);
     z-index: 30;
+}
+
+
+
+
+.cachepopup .cachebox{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.cachepopup .cachebox img{
+    height: 50px;
+}
+.cachepopup .cachebox .title{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+}
+.cachepopup .cachebox .body{
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0px;
+    text-align: center;
+}
+.cachepopup .cachebox .cachebtns{
+    padding-top: 15px;
+}
+.cachepopup .cachebox .cachebtns button{
+    border: 1px solid rgb(0, 185, 0);
+    background-color: rgb(0, 185, 0);
+    font-size: 15px;
+    color: white;
+    padding: 0px 20px 0px 20px;
+    margin: 0px 5px;
+    border-radius: 20px;
+}
+.cachepopup .cachebox .cachebtns .cookiedecline{
+    background-color: grey;
+    border: 1px solid grey;
+}
+.cachepopup .cachebox .cachebtns .cookiedecline:hover{
+    background-color: red;
+    transition: 200ms;
+    border: 1px solid red;
+}
+
+#popad .cookiedecline{
+    background-color: gold;
+    transition: 200ms;
+    color: black;
+    border: 1px solid gold;
 }
 
 

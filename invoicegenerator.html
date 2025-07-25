@@ -89,6 +89,8 @@
                     <li><a class="dropdown-item" href="#sidediv"><i class="bi bi-cloud-download-fill"></i> Download Invoice</a></li>
                     <li><a class="dropdown-item" href="#smallinstruct"><i class="bi bi-file-earmark-text-fill"></i> Instructions on how to Use</a></li>
                     <li><a class="dropdown-item" href="#" onclick="sharePage()"><i class="bi bi-share-fill"></i> Share to others</a></li>
+                    <hr style="margin: 5px 15px;">
+                    <li><a class="dropdown-item" href="mailto: creationprimal@gmail.com"><i class="bi bi-envelope-at-fill"></i> Contact Developer</a></li>
                 </ul>
             </div>
         </div>
@@ -129,11 +131,11 @@
                             </div>
                             <div class="bill-input">
                                 <p>Address</p>
-                                <input type="text" name="" id="from-address" placeholder="Street" required>
+                                <input type="text" name="" id="from-address" placeholder="Address" required>
                             </div>
                             <div class="bill-input">
                                 <p></p>
-                                <input type="text" name="" id="from-city" placeholder="City / State">
+                                <input type="text" name="" id="from-city" placeholder="City / Street">
                             </div>
                             <div class="bill-input">
                                 <p>Phone</p>
@@ -158,7 +160,7 @@
                             </div>
                             <div class="bill-input">
                                 <p>Address</p>
-                                <input type="text" name="" id="to-address" placeholder="Street" required>
+                                <input type="text" name="" id="to-address" placeholder="Address" required>
                             </div>
                             <div class="bill-input">
                                 <p>Phone</p>
@@ -277,9 +279,13 @@
 
 
             <!-- bill info -->
-            <div class="col-lg-3 col-md-12 col-sm-12 sidediv" id="sidediv">
+            <div class="col-lg-3 col-md-12 col-sm-12 sidediv animate__animated animate__fadeInRight" id="sidediv">
                 <div class="sidecontents">
-                    <div class="currency-title"><i class="bi bi-cash-coin"></i><p>Currency</p></div>
+                    <div class="currency-title">
+                        <img src="assets/images/icons/currency.png" alt="">
+                        <img src="assets/images/icons/dowloadpdf.png" alt="">
+                        <p>Currency and More..</p>
+                    </div>
                     <hr>
                     <select class="currency-btn form-select mb-3" id="currencyBtn" onchange="selectedCurrency()" aria-label="Default select example">
                         <option value="USD" selected id="currencydisplay">Change Currency</option>
@@ -293,10 +299,12 @@
                     </select>
                     <!-- <button class="preview-btn mb-3" id="previewBtn">Preview Invoice</button> -->
                     <button class="print-btn" id="downloadpdf">Download Invoice (pdf)</button>
-                    <hr class="mt-5">
+                    <hr class="mt-4">
                     <button class="invite-btn mb-3" onclick="sharePage()"><i class="bi bi-share"></i> Invite Others</button>
-                    <a href="https://selcompay.me/61198562" target="_blank" rel="noopener noreferrer"><button class="invite-btn mb-3">😊 Buy Me Coffee</button></a>
-
+                    <a href="https://selcompay.me/61198562" target="_blank" rel="noopener noreferrer"><button class="invite-btn mb-3"><img src="assets/images/icons/buymecoffee.png" alt=""> Buy Me Coffee</button></a>
+                    <div class="cachepopup">
+                       
+                    </div>
 
 
 
